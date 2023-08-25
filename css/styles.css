@@ -1,10 +1,47 @@
 /* CUSTOM PROPS */
 :root {
-    /* Custom styles */
+    --midnight-green: #014e56;
+    --light-coral: #f67e7e;
+    --white: #ffffff;
+    --rapture-blue: #79c8c7;
+    --police-blue: #2c6269;
+    --deep-jungle-green: #004047;
+    --sacramento-state-green: #012f34;
+    --dark-green: #002529;
+    --font-family: "Livvic", "Arial", sans-serif;
+    --heading-large: 100px;
 }
 
 
 /* FONTS */
+@font-face {
+    font-family: "Livvic";
+    src: url("../fonts/Livvic-SemiBold.woff2") format("woff2"),
+        url("../fonts/Livvic-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Livvic";
+    src: url("../fonts/Livvic-MediumItalic.woff2") format("woff2"),
+        url("../fonts/Livvic-MediumItalic.woff") format("woff");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Livvic";
+    src: url("../fonts/Livvic-Bold.woff2") format("woff2"),
+        url("../fonts/Livvic-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 
 
 /* GLOBAL */
@@ -30,11 +67,12 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #222;
-    background-color: #fff;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    color: var(--white);
+    background-color: var(--midnight-green);
 }
 
 img {
@@ -81,14 +119,29 @@ select:-webkit-autofill:focus {
     overflow: hidden;
 }
 
+h1 {
+    font-size: 64px;
+    line-height: 56px;
+}
+
+h2 {
+    font-size: 48px;
+    line-height: 48px;
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 28px;
+}
+
 
 
 /* CONTAINER */
 .container {
     width: 100%;
-    max-width: 1200px;
-    padding-left: 50px;
-    padding-right: 50px;
+    max-width: 1150px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
 }
