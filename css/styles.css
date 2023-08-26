@@ -200,6 +200,74 @@ h3 {
 }
 
 
+/* FORM ELEMENTS */
+.form-group {
+    position: relative;
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start; */
+}
+
+.form-field {
+    display: block;
+    width: 100%;
+    padding: 0 14px 16px;
+    background-color: transparent;
+    color: var(--white);
+    border: none;
+    border-bottom: 1px solid var(--white);
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: -0.12px;
+}
+
+.form-field:focus {
+    outline: 1px dashed var(--light-coral);
+    outline-offset: 3px;
+}
+
+.form-field::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-field:not(:placeholder-shown) {
+    border-color: var(--rapture-blue);
+}
+
+.form-field-textare {
+    min-height: 84px;
+    resize: vertical;
+}
+
+.form__error-msg {
+    position: absolute;
+    left: 8px;
+    bottom: -6px;
+    transform: translateY(100%);
+    font-weight: 700;
+    font-style: italic;
+    font-size: 10px;
+    line-height: normal;
+    color: var(--light-coral);
+}
+
+.form-field:not(:focus):not(:placeholder-shown):valid {
+    border-color: var(--rapture-blue);
+}
+
+.form-field:not(:focus):not(:placeholder-shown):invalid {
+    border-color: var(--light-coral);
+    color: var(--light-coral);
+}
+
+.form-field:focus + .form__error-msg,
+.form-field:valid + .form__error-msg,
+.form-field:placeholder-shown + .form__error-msg {
+    display: none;
+}
+
+
 /* MAIN CONTENT */
 .main-content {
     flex-grow: 1;
