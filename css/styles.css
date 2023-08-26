@@ -383,10 +383,9 @@ h3 {
     line-height: 28px;
 }
 
-.hero__green-line {
-    margin: 0;
+.hero__content::before {
+    content: "";
     margin-bottom: 20px;
-    border: 0;
     width: 50px;
     height: 4px;
     background-color: var(--rapture-blue);
