@@ -353,7 +353,7 @@ h3 {
     background-image: url("../img/hero-bg-left.svg"),
         url("../img/hero-bg-bottom.svg");
     background-repeat: no-repeat;
-    background-position: top 57px left -100px, bottom -100px right 165px;
+    background-position: top 57px right calc(50% + 715px), bottom -100px left calc(50% + 380px);
 }
 
 .hero__inner {
