@@ -268,10 +268,83 @@ h3 {
 }
 
 
+/* LOGO */
+.logo {
+    display: inline-block;
+}
+
+.logo__link {
+    display: flex;
+}
+
+.logo__link:hover {
+    opacity: 0.8;
+}
+
+.logo__link:active {
+    opacity: 0.6;
+}
+
+.logo__img {
+    flex-shrink: 0;
+    width: 160px;
+    height: 40px;
+    object-fit: contain;
+}
+
+
+/* SITENAV */
+.sitenav__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sitenav__item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.sitenav__link {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.sitenav__link:hover {
+    color: var(--light-coral);
+}
+
+.sitenav__link:active {
+    opacity: 0.6;
+}
+
+
 /* MAIN CONTENT */
 .main-content {
     flex-grow: 1;
 }
+
+
+/* SITE-HEADER */
+.site-header {
+    padding-top: 73px;
+    padding-bottom: 73px;
+}
+
+.site-header__container {
+    display: flex;
+    align-items: center;
+}
+
+.site-header__logo {
+    margin-right: 80px;
+}
+
+.site-header__sitenav {
+    margin-right: auto;
+}
+
 
 
 @media
