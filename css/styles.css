@@ -821,6 +821,37 @@ h3 {
 }
 
 
+/* CLIENTS */
+.clients {
+    padding-top: 140px;
+    padding-bottom: 140px;
+    background-color: var(--sacramento-state-green);
+    background-image: url("../img/clients-bg.svg");
+    background-repeat: no-repeat;
+    background-position: top 0 right calc(50% + 620px);
+}
+
+.clients__container {
+    text-align: center;
+}
+
+.clients__title {
+    margin-top: 0;
+    margin-bottom: 64px;
+}
+
+.clients__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.clients__item:not(:last-child) {
+    margin-right: 40px;
+}
+
 
 /* FOOTER */
 .site-footer {
