@@ -605,6 +605,69 @@ h3 {
 }
 
 
+/* FOOTER */
+.site-footer {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    background-color: var(--dark-green);
+}
+
+.site-footer__container {
+    display: flex;
+}
+
+.site-footer__logo-sitenav-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 125px;
+}
+
+.site-footer__logo {
+    margin-bottom: 16px;
+}
+
+.site-footer__text-wrapper {
+    margin-right: auto;
+    opacity: 0.6;
+}
+
+.site-footer__socials-copy-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.site-footer__socials {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-footer__socials-item:not(:last-child) {
+    margin-right: 16px;
+}
+
+.site-footer__socials-link {
+    color: var(--white);
+}
+
+.site-footer__socials-link:hover {
+    color: var(--light-coral);
+}
+
+.site-footer__socials-link:active {
+    opacity: 0.6;
+}
+
+.site-footer__copy-text {
+    opacity: 0.6;
+}
+
+
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
