@@ -582,6 +582,29 @@ h3 {
     object-fit: cover;
 }
 
+
+/* CTA */
+.cta {
+    padding-top: 76px;
+    padding-bottom: 76px;
+    background-color: var(--light-coral);
+    color: var(--sacramento-state-green);
+    background-image: url("../img/cta-bg.svg");
+    background-repeat: no-repeat;
+    background-position: bottom -100px right calc(50% + 620px);
+}
+
+.cta__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cta__title {
+    margin: 0;
+}
+
+
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
