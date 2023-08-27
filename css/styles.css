@@ -356,6 +356,13 @@ h3 {
     background-position: top 57px right calc(50% + 715px), bottom -100px left calc(50% + 380px);
 }
 
+.hero-about {
+    padding-top: 47px;
+    padding-bottom: 120px;
+    background-image: url("../img/hero-about-bg.svg");
+    background-position: bottom 0 left calc(50% + 710px);
+}
+
 .hero__inner {
     display: flex;
 }
@@ -365,6 +372,11 @@ h3 {
     margin-right: 30px;
     font-size: var(--heading-large);
     line-height: var(--heading-large);
+}
+
+.hero-about .hero__title {
+    font-size: 64px;
+    line-height: 100px;
 }
 
 .hero__title-red {
@@ -383,12 +395,20 @@ h3 {
     line-height: 28px;
 }
 
+.hero-about .hero__content {
+    max-width: 730px;
+}
+
 .hero__content::before {
     content: "";
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     width: 50px;
     height: 4px;
     background-color: var(--rapture-blue);
+}
+
+.hero-about .hero__content::before {
+    background-color: var(--light-coral);
 }
 
 .hero__text {
