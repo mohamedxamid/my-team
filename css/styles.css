@@ -857,12 +857,10 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 40px;
     margin: 0;
     padding: 0;
     list-style: none;
-}
-.clients__item:not(:last-child) {
-    margin-right: 40px;
 }
 
 
@@ -1038,6 +1036,10 @@ only screen and (                min-resolution: 2dppx) {
         background-position: top 0 left -100px, bottom 0 right 0;
     }
 
+    .clients {
+        background-position: top -100px left 0;
+    }
+
     .cta {
         background-position: bottom -122px left 0;
     }
@@ -1200,6 +1202,22 @@ only screen and (                min-resolution: 2dppx) {
         margin-left: 11px;
     }
 
+    /* CLIENTS */
+    .clients {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .clients__title {
+        margin-bottom: 52px;
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .clients__list {
+        gap: 26px;
+    }
+
     /* CTA */
     .cta__container {
         justify-content: space-between;
@@ -1244,6 +1262,14 @@ only screen and (                min-resolution: 2dppx) {
     .directors__item {
         max-width: calc(100%);
         margin-left: 0;
+    }
+
+    .clients {
+        background-position: top -100px left -100px;
+    }
+
+    .clients__list {
+        gap: 16px;
     }
 }
 
@@ -1392,6 +1418,11 @@ only screen and (                min-resolution: 2dppx) {
         padding-left: 40px;
         padding-right: 40px;
     }
+
+    .clients__list {
+        flex-direction: column;
+        gap: 56px;
+    }
 }
 
 @media only screen and (max-width: 450px) {
@@ -1501,6 +1532,21 @@ only screen and (                min-resolution: 2dppx) {
 
     .directors__item {
         margin-top: 52px;
+    }
+
+    /* CLIENTS */
+    .clients {
+        padding-top: 88px;
+        padding-bottom: 88px;
+    }
+
+    .clients__container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .clients__title {
+        margin-bottom: 64px;
     }
 
     /* CTA */
