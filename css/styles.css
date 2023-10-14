@@ -140,8 +140,8 @@ h3 {
 .container {
     width: 100%;
     max-width: 1150px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -319,6 +319,11 @@ h3 {
     opacity: 0.6;
 }
 
+/* MENUBAR-TOGGLER */
+.menubar-toggler {
+    display: none;
+}
+
 
 /* MAIN CONTENT */
 .main-content {
@@ -343,6 +348,13 @@ h3 {
 
 .site-header__sitenav {
     margin-right: auto;
+}
+
+.site-header__menubar {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
@@ -1001,4 +1013,111 @@ only screen and (                min-resolution: 2dppx) {
 
 /* Retina-specific stuff here */
 
+}
+
+@media only screen and (max-width: 800px) {
+    .site-header__logo {
+        margin-right: 48px;
+    }
+
+    .logo__img {
+        width: 128px;
+        height: 32px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .site-header__container {
+        justify-content: space-between;
+    }
+    
+    .site-header__menubar {
+        display: none;
+    }
+
+    .site-header--active::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        content: "";
+    }
+
+    .site-header--active .site-header__menubar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 36px;
+        width: 255px;
+        max-width: 100%;
+        padding: 112px 48px 0;
+        background-color: var(--police-blue);
+        background-image: url("../img/hero-about-bg.svg");
+        background-repeat: no-repeat;
+        background-position: bottom 0 left calc(50% + 127px);
+        z-index: 9;
+    }
+
+    .site-header--active .site-header__sitenav {
+        margin-right: 0;
+    }
+
+    .site-header--active .sitenav__list {
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .menubar-toggler {
+        position: relative;
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: none;
+        background-color: transparent;
+        z-index: 9;
+    }
+
+    .menubar-toggler span, 
+    .menubar-toggler span::before,
+    .menubar-toggler span::after {
+        position: absolute;
+        top: 50%; margin-top: -1.5px;
+        left: 50%; margin-left: -10px;
+        display: block;
+        width: 20px;
+        height: 3px;
+        background-color: #fff;
+    }
+
+    .menubar-toggler span::before,
+    .menubar-toggler span::after {
+        content: "";
+    }
+
+    .menubar-toggler span::before {
+        transform: translateY(-7px);
+    }
+
+    .menubar-toggler span::after {
+        transform: translateY(7px);
+    }
+
+    .menubar-toggler--active span {
+        height: 0;
+    }
+
+    .menubar-toggler--active span::before {
+        transform: rotate(45deg);
+    }
+
+    .menubar-toggler--active span::after {
+        transform: rotate(-45deg);
+    }
 }

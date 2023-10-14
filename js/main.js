@@ -1,6 +1,8 @@
 const modifiers = {
     itemDirectorMoreBtnActive: "item-director__more-btn--active",
-    itemDirectorActive: "item-director--active"
+    itemDirectorActive: "item-director--active",
+    elMenubarTogglerActive: "menubar-toggler--active",
+    elSiteHeaderActive: "site-header--active"
 }
 
 const elsItemDirectorMoreBtn = document.querySelectorAll('.item-director__more-btn');
@@ -16,3 +18,14 @@ elsItemDirectorMoreBtn.forEach(function (elItemDirectorMoreBtn) {
         elItemDirectorMoreBtn.closest('.item-director').classList.toggle(modifiers.itemDirectorActive);
     })
 })
+
+// SITENAV-TOGGLER
+const elSiteHeader = document.querySelector('.site-header');
+const elMenuBarToggler = elSiteHeader.querySelector('.js-menubar-toggler');
+
+if (elMenuBarToggler) {
+    elMenuBarToggler.addEventListener('click', function() {
+        elSiteHeader.classList.toggle(modifiers.elSiteHeaderActive);
+        elMenuBarToggler.classList.toggle(modifiers.elMenubarTogglerActive);
+    })
+}
