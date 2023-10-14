@@ -1019,11 +1019,19 @@ only screen and (                min-resolution: 2dppx) {
     .hero__content {
         max-width: 345px;
     }
+
+    .features {
+        background-position: top 0 right -100px;
+    }
 }
 
 @media only screen and (max-width: 935px) {
     .hero__content {
         max-width: 300px;
+    }
+
+    .features__title-wrapper {
+        margin-right: 25px;
     }
 }
 
@@ -1071,6 +1079,31 @@ only screen and (                min-resolution: 2dppx) {
 
     .hero__text {
         font-size: 15px;
+    }
+
+    /* FEATURES */
+    .features {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .features__container {
+        flex-direction: column;
+        padding-left: 98px;
+        padding-right: 98px;
+    }
+
+    .features__title-wrapper::before {
+        margin-bottom: 32px;
+    }
+
+    .features__title {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .features__list {
+        margin-top: 64px;
     }
 }
 
@@ -1168,9 +1201,21 @@ only screen and (                min-resolution: 2dppx) {
     .menubar-toggler--active span::after {
         transform: rotate(-45deg);
     }
+
+    /* FEATURES */
+    .features__container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
 }
 
 @media only screen and (max-width: 450px) {
+    /* SITE-HEADER */
+    .site-header__container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    
     /* HERO */
     .hero {
         padding-top: 7px;
@@ -1184,5 +1229,44 @@ only screen and (                min-resolution: 2dppx) {
     .hero__title {
         font-size: 40px;
         line-height: 40px;
+    }
+
+    /* FEATURES */
+    .features {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .features__container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .features__title-wrapper {
+        max-width: 240px;
+        margin-right: 0;
+    }
+
+    .features__list {
+        margin-top: 56px;
+    }
+
+    .item-features {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .features__item:not(:last-child) {
+        margin-bottom: 48px;
+    }
+
+    .item-features__icon {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    .item-features__title {
+        margin-bottom: 8px;
     }
 }
