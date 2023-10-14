@@ -880,7 +880,7 @@ h3 {
 }
 
 .contact__content {
-    margin-right: 30px;
+    margin-right: 24px;
 }
 
 .contact__title {
@@ -1042,6 +1042,10 @@ only screen and (                min-resolution: 2dppx) {
 
     .cta {
         background-position: bottom -122px left 0;
+    }
+
+    .contact {
+        background-position: bottom -100px right -60px, top 0 left -160px;
     }
 }
 
@@ -1231,6 +1235,42 @@ only screen and (                min-resolution: 2dppx) {
         line-height: 32px;
     }
 
+    /* CONTACT */
+    .contact {
+        padding-bottom: 112px;
+        background-position: bottom 0px right -100px, top 47px left -100px;
+    }
+
+    .contact__container {
+        flex-direction: column;
+        align-items: center;
+        gap: 64px;
+    }
+
+    .contact__content {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .contact__title {
+        margin-bottom: 24px;
+        font-size: 64px;
+        line-height: 56px;
+    }
+
+    .contact__subtitle {
+        margin-bottom: 24px;
+    }
+
+    .contact__list {
+        text-align: initial;
+    }
+
+    .contact__form {
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
     /* SITE-FOOTER */
     .site-footer {
         padding-top: 56px;
@@ -1270,6 +1310,11 @@ only screen and (                min-resolution: 2dppx) {
 
     .clients__list {
         gap: 16px;
+    }
+
+    /* CONTACT */
+    .contact {
+        background-position: bottom -100px right -100px, top 0px left -100px;
     }
 }
 
@@ -1423,6 +1468,11 @@ only screen and (                min-resolution: 2dppx) {
         flex-direction: column;
         gap: 56px;
     }
+
+    .contact {
+        background-image: url(../img/contact-bg.svg);
+        background-position: bottom -100px right -100px;
+    }
 }
 
 @media only screen and (max-width: 450px) {
@@ -1558,6 +1608,31 @@ only screen and (                min-resolution: 2dppx) {
     .cta__container {
         padding-left: 24px;
         padding-right: 24px;
+    }
+
+    /* CONTACT */
+    .contact {
+        padding-top: 7px;
+    }
+
+    .contact__container {
+        gap: 56px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .contact__title {
+        margin-bottom: 16px;
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .contact__subtitle {
+        margin-bottom: 40px;
+    }
+
+    .contact__item:not(:last-child) {
+        margin-bottom: 24px;
     }
 
     /* SITE-FOOTER */
