@@ -1,3 +1,5 @@
+const { default: axios } = require("axios");
+
 const modifiers = {
     itemDirectorMoreBtnActive: "item-director__more-btn--active",
     itemDirectorActive: "item-director--active",
@@ -13,8 +15,6 @@ elsItemDirectorMoreBtn.forEach(function (elItemDirectorMoreBtn) {
         evt.preventDefault();
 
         elItemDirectorMoreBtn.classList.toggle(modifiers.itemDirectorMoreBtnActive);
-        // elItemDirectorMoreBtn.parentElement.nextElementSibling.classList.toggle(modifiers.activeContentDirectorActive);
-        // elItemDirectorMoreBtn.parentElement.closest('.active-content-director').classList.toggle(modifiers.activeContentDirectorActive);
         elItemDirectorMoreBtn.closest('.item-director').classList.toggle(modifiers.itemDirectorActive);
     })
 })
@@ -27,5 +27,30 @@ if (elMenuBarToggler) {
     elMenuBarToggler.addEventListener('click', function() {
         elSiteHeader.classList.toggle(modifiers.elSiteHeaderActive);
         elMenuBarToggler.classList.toggle(modifiers.elMenubarTogglerActive);
+    })
+}
+
+// FORM
+const elsForm = document.querySelectorAll('form')
+
+elsForm.forEach(elForm => {
+    elForm.addEventListener('submit', (evt) => {
+        evt.preventDefault()
+
+        const formData = new FormData(evt.target)
+        const json = JSON.stringify(Object.fromEntries(formData.entries()))
+
+        postData('http://localhost:3000/requests', json)
+            .then(({data}) => console.log(data))
+            .catch(err => console.log(err.message))
+            .finally(() => evt.target.reset())
+    })
+})
+
+async function postData(url, data) {
+    return await axios.post(url, data, {
+        headers: {
+            "Content-Type": "application/json",
+        }
     })
 }
